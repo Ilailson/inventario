@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using Inventario.Data;
+using Inventario.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,7 +8,7 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<Contexto>
     (options => options.UseMySql(
-        "server=localhost;initial catalog=inventario;uid=root;pwd=123",
+        "server=localhost;initial catalog=inventario;uid=root;pwd=",
         Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.25-mysql")));
 
 var app = builder.Build();
